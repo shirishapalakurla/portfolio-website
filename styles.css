@@ -189,6 +189,7 @@ body.dark-mode .navbar {
 .navbar .container {
     display: flex;
     justify-content: space-between;
+    /* Keep spacing but allow margin-auto to work better if needed, or switch to flex-start */
     align-items: center;
     width: 100%;
 }
@@ -197,6 +198,8 @@ body.dark-mode .navbar {
     font-size: 1.8rem;
     font-weight: 700;
     color: var(--text-main);
+    margin-right: auto;
+    /* Push everything else to the right, ensuring Logo is isolated on left */
 }
 
 .logo span {
@@ -206,6 +209,8 @@ body.dark-mode .navbar {
 .nav-links {
     display: flex;
     gap: 2rem;
+    margin-right: 2rem;
+    /* Add space between links and controls */
 }
 
 .nav-links a {
