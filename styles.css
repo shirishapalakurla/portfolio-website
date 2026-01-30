@@ -445,60 +445,65 @@ img {
 /* About Section */
 /* About Section */
 .about-content {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: 50px;
-    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .about-text p {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     color: var(--text-light);
-    margin-bottom: 2rem;
+    margin-bottom: 0;
     line-height: 1.8;
 }
 
-.info-grid {
+.info-list-container {
     display: flex;
-    flex-direction: column;
-    gap: 15px;
+    flex-wrap: wrap;
+    /* Allow wrapping */
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
 }
 
 .info-item {
     display: flex;
     align-items: center;
-    padding: 15px 20px;
+    padding: 15px 25px;
     background-color: var(--bg-alt);
     border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 6px;
+    border-radius: 50px;
+    /* Pill shape */
     transition: var(--transition);
 }
 
 .info-item:hover {
-    transform: translateX(5px);
+    transform: translateY(-5px);
     border-color: var(--primary-color);
     background-color: rgba(100, 255, 218, 0.05);
+    box-shadow: var(--shadow);
 }
 
 .info-item i {
     color: var(--primary-color);
     font-size: 1.1rem;
-    margin-right: 15px;
-    width: 36px;
-    height: 36px;
-    background: rgba(100, 255, 218, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    flex-shrink: 0;
+    margin-right: 12px;
+    /* Removed background circle for cleaner pill look */
+    width: auto;
+    height: auto;
+    background: none;
+    border-radius: 0;
 }
 
 .info-item span {
     font-family: var(--font-body);
-    font-size: 13px;
+    font-size: 14px;
     color: var(--text-light);
-    word-break: break-all;
+    font-weight: 500;
 }
 
 /* Skills Section */
